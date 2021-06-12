@@ -1,9 +1,10 @@
 import s from './Dialog.module.css';
+import {NavLink} from "react-router-dom";
 
 const Dialog = (props) => {
     return (
         <div className={s.dialog}>
-            {props.name}
+            <NavLink to='/dialogs/1'>{props.name}</NavLink>
         </div>
     );
 }
