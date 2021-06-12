@@ -24,11 +24,8 @@
 
 .app-wrapper {
   display: grid;
-
   margin: 0 auto;
   max-width: 60%;
-
-
 
   grid-template-areas:
   "h h"
