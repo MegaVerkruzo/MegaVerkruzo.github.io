@@ -1,15 +1,8 @@
-a {
-  margin: 30px;
-}
+
 
 .header, .nav, .content {
   background: lightgreen;
   border: black 2px solid;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 .app-wrapper {
@@ -26,20 +19,9 @@ body {
   grid-template-columns: 2fr 10fr;
 }
 
-.header {
-  grid-area: h;
-}
-
-.header img {
-  width: 30px;
-}
 
 
 
-.nav {
-  grid-area: n;
-}
 
-.content {
-  grid-area: c;
-}
+
+
