@@ -2,29 +2,14 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 
 const App = () => {
   return (
     <div className='app-wrapper'>
       <Header />
-      <nav className='nav'>
-        <div>
-            <a>Profile</a>
-        </div>
-        <div>
-            <a>Messages</a>
-        </div>
-        <div>
-            <a>News</a>
-        </div>
-        <div>
-            <a>Music</a>
-        </div>
-        <div>
-            <a>Settings</a>
-        </div>
-      </nav>
+      <Navbar />
       <div className='content'>
           <div>
               <img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1200/public/2020-06/VC_Experiences_ReopeningBeaches_RF_1156532604_1280x640.jpg?itok=tPCjquVe"></img>
