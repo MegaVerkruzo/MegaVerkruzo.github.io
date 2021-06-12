@@ -1,8 +1,10 @@
 import React from 'react';
+import './Header.css';
+
 
 const Header = () => {
     return (
-        <header className='header'>
+        <header className='header block'>
             <img src='https://image.flaticon.com/icons/png/512/4832/4832045.png'></img>
         </header>
     );

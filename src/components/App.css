@@ -2,7 +2,7 @@
   font-family: Arial;
 }
 
-.header, .nav, .content {
+.block {
   background: lightblue;
   border: black 2px solid;
   margin: 10px;

@@ -1,8 +1,10 @@
 import React from 'react';
+import './Profile.css';
+
 
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className='content block'>
             <div>
                 <img id="wall" src="http://elitefon.ru/pic/201302/1920x1080/elitefon.ru-32867.jpg"></img>
             </div>
