@@ -1,6 +1,8 @@
 
 //import React, {Component} from 'react';
 import './App.css';
+import Technologies from "./Technologies";
+import Header from "./Header";
 
 const App = () => {
   return (
@@ -11,21 +13,8 @@ const App = () => {
   );
 }
 
-const Header = () => {
-    return (<div>
-        <a href="#s">Home</a>
-        <a href="#s">News Feed</a>
-        <a href="#s">Message</a>
-    </div>)
-}
 
-const Technologies = () => {
-    return (<div>
-        <ul>
-            <li>Привет</li>
-            <li>Привет</li>
-        </ul>
-    </div>);
-}
+
+
 
 export default App;
