@@ -4,10 +4,10 @@ const Profile = () => {
     return (
         <div className='content'>
             <div>
-                <img src="https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1200/public/2020-06/VC_Experiences_ReopeningBeaches_RF_1156532604_1280x640.jpg?itok=tPCjquVe"></img>
+                <img id="wall" src="http://elitefon.ru/pic/201302/1920x1080/elitefon.ru-32867.jpg"></img>
             </div>
             <div>
-                <img src="https://image.flaticon.com/icons/png/512/4481/4481101.png"></img>
+                <img id="icon" src="https://image.flaticon.com/icons/png/512/4481/4481101.png"></img>
             </div>
 
             <div>
