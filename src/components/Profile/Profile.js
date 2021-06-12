@@ -5,7 +5,7 @@ import Posts from "../Posts/Posts";
 
 const Profile = () => {
     return (
-        <div className='content block'>
+        <div className='content'>
             <div>
                 <img id="wall" src="http://elitefon.ru/pic/201302/1920x1080/elitefon.ru-32867.jpg"></img>
             </div>
