@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import Posts from "../Posts/Posts";
 
 
 const Profile = () => {
@@ -27,6 +28,7 @@ const Profile = () => {
             <div className="block_text">
                 <b className="line">Web Site:</b> https://vk.com/verkruzo
             </div>
+            <Posts />
         </div>
     );
 }

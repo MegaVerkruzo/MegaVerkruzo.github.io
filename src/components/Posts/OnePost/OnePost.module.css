@@ -1,5 +1,18 @@
 .posts__items {
     display: inline-block;
     border: 2px solid black;
-    padding: 8px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.items__img{
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+    border: 2px black solid;
+}
+
+.items__text {
+    margin: 15px 30px 0 70px;
+    padding: 5px 0 0 50px;
 }

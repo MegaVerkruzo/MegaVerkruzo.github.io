@@ -5,7 +5,7 @@ import OnePost from "./OnePost/OnePost";
 
 const Posts = () => {
     return (
-        <div className="posts block">
+        <div className="posts block_up">
             <div className="posts__title title">
                 My posts
             </div>
@@ -18,8 +18,8 @@ const Posts = () => {
                 </div>
             </div>
 
-            <OnePost />
-            <OnePost />
+            <OnePost message="Hi, how are you"/>
+            <OnePost message="I am fine, thank you"/>
 
 
         </div>

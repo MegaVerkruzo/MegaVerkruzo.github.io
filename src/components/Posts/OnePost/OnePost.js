@@ -1,10 +1,12 @@
 import classes from './OnePost.module.css';
 
-const OnePost = () => {
+const OnePost = (props) => {
     return (
         <div className={classes.posts__items}>
-            <div className="items__img">1</div>
-            <div className="items__text ">Пост</div>
+            <img className={classes.items__img} src="https://image.flaticon.com/icons/png/512/4481/4481101.png"></img>
+            <div className={classes.items__text}>
+                {props.message}
+            </div>
         </div>
     );
 }

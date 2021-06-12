@@ -1,9 +1,11 @@
-.posts {
-    grid-area: p;
-}
+
 
 .posts__title {
     margin: 30px;
+}
+
+.form {
+    margin: 20px;
 }
 
 .form__area {
