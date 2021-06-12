@@ -1,5 +1,5 @@
 import s from './Dialogs.module.css';
-import Dialog from "./Dialog/Dialog";
+import Dialog from "./Dialog/Dialog.js";
 
 const Dialogs = () => {
     return (
