@@ -1,3 +1,10 @@
 .nav {
     grid-area: n;
 }
+
+.nav .block_text {
+    font-size: 30px;
+    margin: 20px 30px;
+}
+
+

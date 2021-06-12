@@ -1,8 +1,11 @@
-
+* {
+  font-family: "Gayathri Thin";
+}
 
 .header, .nav, .content {
   background: lightgreen;
   border: black 2px solid;
+  margin: 10px;
 }
 
 .app-wrapper {
@@ -10,6 +13,8 @@
 
   margin: 0 auto;
   width: 1200px;
+
+
 
   grid-template-areas:
   "h h"
