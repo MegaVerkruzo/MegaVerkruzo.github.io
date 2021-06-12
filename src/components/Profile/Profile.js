@@ -22,17 +22,11 @@ const Profile = () => {
                 <b className="line">City:</b> Naberezhnye Chelny
             </div>
             <div className="block_text">
-                <b className="line">Education:</b> BSU '11
+                <b className="line">Education:</b> Home learning
             </div>
             <div className="block_text">
-                <b className="line">Web Site:</b> https://it-kamasutra.com
+                <b className="line">Web Site:</b> https://vk.com/verkruzo
             </div>
-            <br></br>
-            <b className="block_text">
-                My posts
-            </b>
-            {/*<input type="text">your news..</input>*/}
-            <button>Send</button>
         </div>
     );
 }

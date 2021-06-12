@@ -8,6 +8,10 @@
   margin: 10px;
 }
 
+.title {
+  font-size: 40px;
+}
+
 .app-wrapper {
   display: grid;
 
@@ -18,9 +22,10 @@
 
   grid-template-areas:
   "h h"
-  "n c";
+  "n c"
+  "n p";
 
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 6fr 4fr;
   grid-template-columns: 2fr 10fr;
 }
 
