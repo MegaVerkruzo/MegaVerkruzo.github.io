@@ -1,14 +1,13 @@
 
 import React from 'react';
 import './App.css';
+import Header from "./components/Header";
 
 
 const App = () => {
   return (
     <div className='app-wrapper'>
-      <header className='header'>
-        <img src='https://image.flaticon.com/icons/png/512/4832/4832045.png'></img>
-      </header>
+      <Header />
       <nav className='nav'>
         <div>
             <a>Profile</a>
