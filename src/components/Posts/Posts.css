@@ -5,3 +5,13 @@
 .posts__title {
     margin: 30px;
 }
+
+.form__area {
+    max-width: 500px;
+}
+
+.form__button {
+    float: right;
+    margin: 20px 100px;
+}
+
