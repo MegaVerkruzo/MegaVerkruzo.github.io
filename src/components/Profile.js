@@ -10,18 +10,25 @@ const Profile = () => {
                 <img id="icon" src="https://image.flaticon.com/icons/png/512/4481/4481101.png"></img>
             </div>
 
-            <div>
-                Dmitry K.
+            <div className="block_text">
+                <b className="line">Full name:</b> Grunskie Alexey
             </div>
-            <div>
-                <div>Date of Birth: 2 january</div>
-                <div>City: Minsk</div>
-                <div>Education: BSU '11</div>
-                <div>Web Site: https://it-kamasutra.com</div>
+            <div className="block_text">
+                <b className="line">Date of Birth:</b> 3 April
             </div>
-            <div>
+            <div className="block_text">
+                <b className="line">City:</b> Naberezhnye Chelny
+            </div>
+            <div className="block_text">
+                <b className="line">Education:</b> BSU '11
+            </div>
+            <div className="block_text">
+                <b className="line">Web Site:</b> https://it-kamasutra.com
+            </div>
+            <br></br>
+            <b className="block_text">
                 My posts
-            </div>
+            </b>
             {/*<input type="text">your news..</input>*/}
             <button>Send</button>
         </div>

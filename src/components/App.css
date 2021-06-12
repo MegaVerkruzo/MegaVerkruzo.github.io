@@ -1,5 +1,5 @@
 * {
-  font-family: "Gayathri Thin";
+  font-family: Arial;
 }
 
 .header, .nav, .content {
@@ -20,7 +20,7 @@
   "h h"
   "n c";
 
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 8fr;
   grid-template-columns: 2fr 10fr;
 }
 
