@@ -1,0 +1,8 @@
+s.messanger {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+s.DialogsTitle {
+    color: red;
+}
