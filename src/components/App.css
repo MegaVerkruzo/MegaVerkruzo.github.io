@@ -14,12 +14,23 @@
   border: 2px black solid;
 }
 
+textarea {
+  outline: none;
+  -moz-appearance: none;
+  border: 1px solid black;
+  resize: none;
+}
+
 .block_up {
   border-top: 2px solid black;
 }
 
 .title {
-  font-size: 40px;
+  display: inline-block;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 2px solid black;
 }
 
 .button {

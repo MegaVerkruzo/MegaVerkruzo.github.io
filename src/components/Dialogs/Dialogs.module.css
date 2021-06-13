@@ -4,16 +4,12 @@
 }
 
 .DialogsTitle {
-    color: black;
     margin: 20px 20px 40px 20px;
     padding: 5px;
-    font-size: 30px;
-    text-align: center;
-    border-bottom: 2px solid black;
 }
 
-.title__chat {
-    align-items: center;
+.title__mar {
+    margin: 10px;
 }
 
 .messages {

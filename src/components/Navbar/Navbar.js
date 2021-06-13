@@ -1,9 +1,8 @@
 import React from 'react';
 import classes from './Navbar.module.css';
-import {NavLink} from 'react-router-dom';
 import Panel from "./Human/Panel";
 import BestFriend from "./BestFriend/BestFriend";
-import c from './../Dialogs/Dialogs.module.css';
+import './../App.css';
 
 const Navbar = (props) => {
 
@@ -17,7 +16,7 @@ const Navbar = (props) => {
                 { menu }
             </nav>
             <div className={`${classes.friends}` + ' block'}>
-                <div className={c.DialogsTitle}>
+                <div className={`${classes.title} title`}>
                     BestFriends:
                 </div>
                 { bestFriends }

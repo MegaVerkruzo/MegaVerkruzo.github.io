@@ -2,7 +2,6 @@ import s from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog.js";
 import './../App.css';
 import Message from "./Message/Message";
-import c from "./Message/Message.module.css";
 
 const Dialogs = (props) => {
 
@@ -14,13 +13,13 @@ const Dialogs = (props) => {
     return (
         <div className={s.messanger}>
             <div className={s.rightline}>
-                <div className={s.DialogsTitle}>
+                <div className={`title ${s.title__mar}`}>
                     DIALOGS :
                 </div>
                 { contactElements }
             </div>
             <div className={s.messages}>
-                <div className={`${s.DialogsTitle} ${s.title__chat}`}>
+                <div className={`title ${s.title__mar}`}>
                     CHAT :
                 </div>
                 { messageElements }
