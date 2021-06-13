@@ -6,7 +6,9 @@
 }
 
 .postsLike {
+    display: inline;
     color: black;
+    border-bottom: #ff5e5e 2px dashed;
 }
 
 .messages .posts__items {

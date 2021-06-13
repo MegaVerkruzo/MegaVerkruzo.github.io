@@ -10,6 +10,8 @@ const Posts = () => {
         {id: 2, message: "I am fine, thank you", likes: 4},
     ]
 
+    const postElements = postData.map(el => <OnePost message={el.message} likes={el.likes}/>);
+
     return (
         <div className="posts block_up">
             <div className="posts__title title">
@@ -23,11 +25,7 @@ const Posts = () => {
                     <button>Send</button>
                 </div>
             </div>
-
-            <OnePost message={postData[0].message} likes={postData[0].likes}/>
-            <OnePost message={postData[1].message} likes={postData[1].likes}/>
-
-
+            { postElements }
         </div>
     );
 }

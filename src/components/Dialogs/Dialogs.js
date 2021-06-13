@@ -23,25 +23,19 @@ const Dialogs = () => {
         {id: 5, message:"76"}
     ]
 
+    const contactElements = contactData.map(el => <Dialog name={el.name} id={el.id}/>);
+    const messageElements = messageData.map(el => <Message message={el.message}/>);
+
     return (
         <div className={s.messanger}>
             <div>
                 <div className={s.DialogsTitle}>
                     DIALOGS:
                 </div>
-                <Dialog name={contactData[0].name} id={contactData[0].id}/>
-                <Dialog name={contactData[1].name} id={contactData[1].id}/>
-                <Dialog name={contactData[2].name} id={contactData[2].id}/>
-                <Dialog name={contactData[3].name} id={contactData[3].id}/>
-                <Dialog name={contactData[4].name} id={contactData[4].id}/>
-                <Dialog name={contactData[5].name} id={contactData[5].id}/>
+                { contactElements }
             </div>
             <div className={c.messages}>
-                <Message message={messageData[0].message}/>
-                <Message message={messageData[1].message}/>
-                <Message message={messageData[2].message}/>
-                <Message message={messageData[3].message}/>
-                <Message message={messageData[4].message}/>
+                { messageElements }
             </div>
         </div>
     );
