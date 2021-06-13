@@ -1,13 +1,13 @@
 import s from './Dialogs.module.css';
-import one_post from './../Posts/OnePost/OnePost.module.css'
 import Dialog from "./Dialog/Dialog.js";
-import './../App.css'
-import OnePost from './../Posts/OnePost/OnePost'
+import './../App.css';
+import Message from "./Message/Message";
+import c from "./Message/Message.module.css";
 
 const Dialogs = () => {
     return (
         <div className={s.messanger}>
-            <div className={s.dialogs}>
+            <div>
                 <div className={s.DialogsTitle}>
                     DIALOGS:
                 </div>
@@ -18,12 +18,12 @@ const Dialogs = () => {
                 <Dialog name="Sergey" id="5"/>
                 <Dialog name="Airat" id="6"/>
             </div>
-            <div className={one_post.messages}>
-                <OnePost message="Hi, i waant learn ReactJS"/>
-                <OnePost message="Like"/>
-                <OnePost message="Wow, this is cool"/>
-                <OnePost message="3"/>
-                <OnePost message="76"/>
+            <div className={c.messages}>
+                <Message message="Hi, i waant learn ReactJS"/>
+                <Message message="Like"/>
+                <Message message="Wow, this is cool"/>
+                <Message message="3"/>
+                <Message message="76"/>
             </div>
         </div>
     );
