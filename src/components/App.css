@@ -34,9 +34,10 @@
 
   grid-template-areas:
   "h h"
-  "n c";
+  "n c"
+  "f c";
 
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: 1fr 8fr 1fr;
   grid-template-columns: 2fr 10fr;
 }
 

@@ -2,6 +2,10 @@
     grid-area: n;
 }
 
+.friends {
+    grid-area: f;
+}
+
 .block_text {
 
     font-size: 30px;

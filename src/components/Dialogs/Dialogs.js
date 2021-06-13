@@ -13,13 +13,16 @@ const Dialogs = (props) => {
 
     return (
         <div className={s.messanger}>
-            <div>
+            <div className={s.rightline}>
                 <div className={s.DialogsTitle}>
-                    DIALOGS:
+                    DIALOGS :
                 </div>
                 { contactElements }
             </div>
             <div className={s.messages}>
+                <div className={`${s.DialogsTitle} ${s.title__chat}`}>
+                    CHAT :
+                </div>
                 { messageElements }
             </div>
         </div>

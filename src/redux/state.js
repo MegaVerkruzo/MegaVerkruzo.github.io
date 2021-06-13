@@ -21,6 +21,30 @@ const state = {
             {id: 1, message: "Hi, how are you", likes: 43},
             {id: 2, message: "I am fine, thank you", likes: 4},
         ]
+    },
+    NavBarPage: {
+        NavBarItems: [
+            {
+                to: '/profile',
+                text: 'Profile'
+            },
+            {
+                to: '/dialogs',
+                text: 'Messages'
+            },
+            {
+                to: '/news',
+                text: 'News'
+            },
+            {
+                to: '/music',
+                text: 'Music'
+            },
+            {
+                to: '/settings',
+                text: 'Settings'
+            },
+        ]
     }
 }
 
