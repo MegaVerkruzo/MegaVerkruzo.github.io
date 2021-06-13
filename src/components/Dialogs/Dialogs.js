@@ -2,6 +2,7 @@ import s from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog.js";
 import './../App.css';
 import Message from "./Message/Message";
+import React from 'react';
 
 const Dialogs = (props) => {
 
@@ -9,6 +10,13 @@ const Dialogs = (props) => {
 
     const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
     const messageElements = props.state.messageData.map(el => <Message message={el.message} AmI={el.AmI}/>);
+
+    let newMessageText = React.createRef();
+
+    let addMessage = () => {
+        let text = newMessageText.current.value;
+        alert(text);
+    }
 
     return (
         <div className={s.messanger}>
@@ -23,7 +31,10 @@ const Dialogs = (props) => {
                     CHAT :
                 </div>
                 { messageElements }
+                <textarea className={s.input} placeholder="Write message>:3" ref={ newMessageText }>Something</textarea>
+                <div className={`button ${s.button}`} onClick={ addMessage }>Send</div>
             </div>
+
         </div>
     );
 }

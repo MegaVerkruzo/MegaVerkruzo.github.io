@@ -6,13 +6,13 @@ import './../../App.css';
 
 const Posts = (props) => {
 
-    const postElements = props.postData.map(el => <OnePost message={el.message} likes={el.likes}/>);
+    const postElements = props.postData.map(el => <OnePost id={el.id} message={el.message} likes={el.likes}/>);
 
     let newPostElement = React.createRef();
 
     let addPost = () => {
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
     }
 
     return (

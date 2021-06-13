@@ -53,5 +53,14 @@ const state = {
     }
 }
 
+export let addPost = (sendMessage) => {
+    let newPost = {
+        id: 3,
+        message: sendMessage,
+        likes: 0
+    };
+
+    state.profilePage.postData.push(newPost);
+}
 
 export default state;

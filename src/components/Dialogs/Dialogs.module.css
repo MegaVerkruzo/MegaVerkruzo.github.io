@@ -23,3 +23,13 @@
     border-right: 2px black solid;
     padding: 0 20px 0 0;
 }
+
+.input {
+    width: 80%;
+    height: 70px;
+    margin: 50px 0 10px 30px;
+}
+
+.button {
+    margin: 0 0 60px 30px ;
+}
