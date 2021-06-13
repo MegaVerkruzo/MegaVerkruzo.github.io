@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Navbar.module.css';
-import Panel from "./Human/Panel";
+import Panel from "./Panel/Panel";
 import BestFriend from "./BestFriend/BestFriend";
 import './../App.css';
 

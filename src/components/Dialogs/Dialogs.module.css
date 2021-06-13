@@ -9,6 +9,7 @@
 }
 
 .title__mar {
+    cursor: pointer;
     margin: 10px;
 }
 

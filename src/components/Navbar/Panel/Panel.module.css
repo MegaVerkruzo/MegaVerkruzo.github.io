@@ -1,0 +1,12 @@
+.panel__text {
+    font-size: 30px;
+    margin: 20px 30px;
+}
+
+.panel__only_text {
+    cursor: pointer;
+}
+
+a.active {
+    color: white;
+}

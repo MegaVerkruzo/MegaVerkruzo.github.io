@@ -24,8 +24,8 @@ const Posts = (props) => {
                 <div>
                     <textarea className={s.form__area} ref={newPostElement} placeholder="Write something>:3"></textarea>
                 </div>
-                <div className={`${s.form__button} button`}>
-                    <button onClick={addPost}>Send</button>
+                <div className={`${s.form__button} button`} onClick={addPost}>
+                    <div>Send</div>
                 </div>
             </div>
             <div class={s.posts}>

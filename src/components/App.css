@@ -1,4 +1,5 @@
 * {
+  cursor: default;
   font-family: Arial;
 }
 
@@ -15,10 +16,12 @@
 }
 
 textarea {
+  cursor: text;
   outline: none;
   -moz-appearance: none;
   border: 1px solid black;
   resize: none;
+  background: whitesmoke;
 }
 
 .block_up {
@@ -26,6 +29,7 @@ textarea {
 }
 
 .title {
+  cursor: default;
   display: inline-block;
   color: black;
   font-size: 30px;
@@ -34,8 +38,11 @@ textarea {
 }
 
 .button {
-  width: 30px;
-  border-radius: 40px;
+  cursor: default;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px 20px;
+  background: antiquewhite;
 }
 
 .app-wrapper {
