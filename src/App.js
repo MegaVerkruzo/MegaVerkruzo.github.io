@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './components/App.css';
 import Header from "./components/Header/Header.js";
@@ -11,15 +10,18 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 
-const App = () => {
+const App = (props) => {
+    const Route_Dialogs = () => <Dialogs contactData={props.contactData} messageData={props.messageData}/>;
+    const Route_Profile = () => <Profile postData={props.postData}/>
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
-                <Header />
-                <Navbar />
+                <Header/>
+                <Navbar/>
                 <div className="app-wrapper-content block">
-                    <Route path="/dialogs" component={Dialogs}/>
-                    <Route path="/profile" component={Profile}/>
+                    <Route path="/dialogs" component={Route_Dialogs}/>
+                    <Route path="/profile" component={Route_Profile}/>
                     <Route path="/news" component={News}/>
                     <Route path="/music" component={Music}/>
                     <Route path="/settings" component={Settings}/>

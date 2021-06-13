@@ -3,14 +3,9 @@ import './OnePost/OnePost';
 import OnePost from "./OnePost/OnePost";
 
 
-const Posts = () => {
+const Posts = (props) => {
 
-    const postData = [
-        {id: 1, message: "Hi, how are you", likes: 43},
-        {id: 2, message: "I am fine, thank you", likes: 4},
-    ]
-
-    const postElements = postData.map(el => <OnePost message={el.message} likes={el.likes}/>);
+    const postElements = props.postData.map(el => <OnePost message={el.message} likes={el.likes}/>);
 
     return (
         <div className="posts block_up">
