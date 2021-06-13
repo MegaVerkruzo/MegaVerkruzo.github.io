@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const Dialog = (props) => {
 
-    const path = props.sex === "Male" ? "https://image.flaticon.com/icons/png/512/4849/4849759.png" : "https://img-premium.flaticon.com/png/512/4849/4849753.png?token=exp=1623587153~hmac=820b636f8ec5c0ee39b2121b076abbe5";
+    const path = props.sex === "Male" ? "https://image.flaticon.com/icons/png/512/4849/4849759.png" : "https://image.flaticon.com/icons/png/512/82/82459.png";
 
     return (
         <div className={s.dialog}>

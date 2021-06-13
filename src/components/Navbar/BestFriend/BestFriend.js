@@ -7,7 +7,7 @@ const BestFriend = (props) => {
     if (props.sex === "Male") {
         path = "https://image.flaticon.com/icons/png/512/4849/4849759.png";
     } else {
-        path = "https://img-premium.flaticon.com/png/512/4849/4849753.png?token=exp=1623587153~hmac=820b636f8ec5c0ee39b2121b076abbe5";
+        path = "https://image.flaticon.com/icons/png/512/82/82459.png";
     }
 
     return (
