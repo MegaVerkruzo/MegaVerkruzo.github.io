@@ -44,8 +44,14 @@ const state = {
                 to: '/settings',
                 text: 'Settings'
             },
+        ],
+        bestFriends: [
+            {id: 3, name: "Lena", sex: "Female"},
+            {id: 5, name: "Sergey", sex: "Male"},
+            {id: 6, name: "Airat", sex: "Male"}
         ]
     }
 }
+
 
 export default state;

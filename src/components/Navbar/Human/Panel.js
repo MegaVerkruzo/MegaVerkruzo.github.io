@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 import s from './../Navbar.module.css';
 import classes from "../Navbar.module.css";
 
-const Human = (props) => {
+const Panel = (props) => {
     return (
         <div className={classes.block_text}>
             <NavLink to={props.to} activeClassName={classes.active}>{`${props.text}`}</NavLink>
@@ -11,4 +11,4 @@ const Human = (props) => {
     );
 }
 
-export default Human;
+export default Panel;
