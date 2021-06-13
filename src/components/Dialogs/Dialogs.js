@@ -9,7 +9,7 @@ const Dialogs = (props) => {
     debugger;
 
     const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
-    const messageElements = props.state.messageData.map(el => <Message message={el.message}/>);
+    const messageElements = props.state.messageData.map(el => <Message message={el.message} AmI={el.AmI}/>);
 
     return (
         <div className={s.messanger}>
@@ -19,7 +19,7 @@ const Dialogs = (props) => {
                 </div>
                 { contactElements }
             </div>
-            <div className={c.messages}>
+            <div className={s.messages}>
                 { messageElements }
             </div>
         </div>

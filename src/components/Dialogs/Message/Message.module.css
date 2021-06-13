@@ -5,9 +5,6 @@
     margin: 10px;
 }
 
-.messages .posts__items {
-    margin: 10px 150px 10px 40px;
-}
 
 .items__img{
     float: left;
@@ -16,4 +13,12 @@
 .items__text {
     margin: 15px 30px 0 70px;
     padding: 5px 0 0 50px;
+}
+
+.I {
+    align-self: flex-start;
+}
+
+.Someone {
+    align-self: flex-end;
 }

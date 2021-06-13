@@ -9,11 +9,11 @@ const state = {
             {id: 6, name: "Airat", sex: "Male"}
         ],
         messageData: [
-            {id: 1, message:"Hi, i waant learn ReactJS"},
-            {id: 2, message:"Like"},
-            {id: 3, message:"Wow, this is cool"},
-            {id: 4, message:"3"},
-            {id: 5, message:"76"}
+            {id: 1, message:"Hi, i waant learn ReactJS", AmI: true},
+            {id: 2, message:"Like", AmI: false},
+            {id: 3, message:"Wow, this is cool", AmI: false},
+            {id: 4, message:"3", AmI: true},
+            {id: 5, message:"76", AmI: true}
         ]
     },
     profilePage: {
