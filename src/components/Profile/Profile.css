@@ -1,25 +1,4 @@
 
 
-#wall {
-    width: 100%;
-    max-height: 250px;
-}
 
-#icon {
-    min-width: 40px;
-    width: 20%;
-    float: right;
-    border: 3px black dashed;
-    margin: 5px;
-    padding: 5px;
-}
 
-.content .block_text {
-    font-size: 25px;
-    margin: 10px;
-    padding: 2px;
-}
-
-.line {
-    text-decoration: underline;
-}

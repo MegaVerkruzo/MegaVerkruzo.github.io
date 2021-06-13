@@ -11,12 +11,12 @@ const Dialogs = () => {
                 <div className={s.DialogsTitle}>
                     DIALOGS:
                 </div>
-                <Dialog name="Andrey"/>
-                <Dialog name="Alexey"/>
-                <Dialog name="Lena"/>
-                <Dialog name="Darya"/>
-                <Dialog name="Sergey"/>
-                <Dialog name="Airat"/>
+                <Dialog name="Andrey" id="1"/>
+                <Dialog name="Alexey" id="2"/>
+                <Dialog name="Lena" id="3"/>
+                <Dialog name="Darya" id="4"/>
+                <Dialog name="Sergey" id="5"/>
+                <Dialog name="Airat" id="6"/>
             </div>
             <div className={one_post.messages}>
                 <OnePost message="Hi, i waant learn ReactJS"/>
