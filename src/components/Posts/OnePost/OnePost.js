@@ -7,6 +7,9 @@ const OnePost = (props) => {
             <div className={classes.items__text}>
                 {props.message}
             </div>
+            <div className={classes.postsLike}>
+                Likes: {props.likes}
+            </div>
         </div>
     );
 }

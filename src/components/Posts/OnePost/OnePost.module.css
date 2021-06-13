@@ -5,6 +5,10 @@
     margin: 10px;
 }
 
+.postsLike {
+    color: black;
+}
+
 .messages .posts__items {
     margin: 10px 150px 10px 40px;
 }
