@@ -10,6 +10,7 @@ const OnePost = (props) => {
             <div className={classes.postsLike}>
                 Likes: {props.likes}
             </div>
+
         </div>
     );
 }

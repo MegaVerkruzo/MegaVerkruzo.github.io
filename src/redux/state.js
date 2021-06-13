@@ -1,3 +1,5 @@
+import {reRender} from "../render";
+
 const state = {
     dialogPage: {
         contactData: [
@@ -59,8 +61,9 @@ export let addPost = (sendMessage) => {
         message: sendMessage,
         likes: 0
     };
-
     state.profilePage.postData.push(newPost);
+
+    reRender();
 }
 
 export default state;
