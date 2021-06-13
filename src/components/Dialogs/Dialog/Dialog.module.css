@@ -1,6 +1,16 @@
 .dialog {
+    display: flex;
     border: 2px black solid;
     margin: 10px;
-    padding: 30px;
+    padding: 5px;
     background-color: #cde8f8;
+}
+
+.dialog__name {
+    margin: 30px;
+}
+
+.dialog__img {
+    width: 70px;
+    height: 70px;
 }

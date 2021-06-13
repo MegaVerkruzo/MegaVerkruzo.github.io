@@ -6,8 +6,10 @@ import c from "./Message/Message.module.css";
 
 const Dialogs = (props) => {
 
-    const contactElements = props.contactData.map(el => <Dialog name={el.name} id={el.id}/>);
-    const messageElements = props.messageData.map(el => <Message message={el.message}/>);
+    debugger;
+
+    const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
+    const messageElements = props.state.messageData.map(el => <Message message={el.message}/>);
 
     return (
         <div className={s.messanger}>

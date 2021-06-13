@@ -1,12 +1,12 @@
 const state = {
     dialogPage: {
         contactData: [
-            {id: 1, name: "Andrey"},
-            {id: 2, name: "Alexey"},
-            {id: 3, name: "Lena"},
-            {id: 4, name: "Darya"},
-            {id: 5, name: "Sergey"},
-            {id: 6, name: "Airat"}
+            {id: 1, name: "Andrey", sex: "Male"},
+            {id: 2, name: "Alexey", sex: "Male"},
+            {id: 3, name: "Lena", sex: "Female"},
+            {id: 4, name: "Darya", sex: "Female"},
+            {id: 5, name: "Sergey", sex: "Male"},
+            {id: 6, name: "Airat", sex: "Male"}
         ],
         messageData: [
             {id: 1, message:"Hi, i waant learn ReactJS"},

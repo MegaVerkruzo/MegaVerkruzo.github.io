@@ -8,6 +8,11 @@
   margin: 10px;
 }
 
+.avatar {
+  width: 50px;
+  border-radius: 50%;
+  border: 2px black solid;
+}
 
 .block_up {
   border-top: 2px solid black;

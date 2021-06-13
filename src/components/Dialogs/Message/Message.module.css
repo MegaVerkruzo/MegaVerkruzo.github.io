@@ -10,10 +10,7 @@
 }
 
 .items__img{
-    width: 50px;
     float: left;
-    border-radius: 50%;
-    border: 2px black solid;
 }
 
 .items__text {
