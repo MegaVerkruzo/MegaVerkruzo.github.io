@@ -11,8 +11,8 @@ const Navbar = (props) => {
 
 
     return (
-        <div>
-            <nav className={`${classes.nav}` + ' block'}>
+        <div className={classes.nav}>
+            <nav className='block'>
                 { menu }
             </nav>
             <div className={`${classes.friends}` + ' block'}>

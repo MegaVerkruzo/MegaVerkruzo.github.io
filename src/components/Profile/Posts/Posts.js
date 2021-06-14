@@ -15,6 +15,12 @@ const Posts = (props) => {
         props.addPost(text);
     }
 
+    let updateText = () => {
+        let text = newPostElement.current.value;
+
+        props.updateMessage(text);
+    }
+
     return (
         <div className="block_up">
             <div className={`${s.posts__title} title`}>
@@ -22,8 +28,9 @@ const Posts = (props) => {
             </div>
             <div className={s.form}>
                 <div>
-                    <textarea className={s.form__area} ref={newPostElement} placeholder="Write something>:3"></textarea>
+                    <textarea onKeyUp={ updateText } className={s.form__area} ref={newPostElement} placeholder="Write something>:3"></textarea>
                 </div>
+                {`${props.message}`}
                 <div className={`${s.form__button} button`} onClick={addPost}>
                     <div>Send</div>
                 </div>

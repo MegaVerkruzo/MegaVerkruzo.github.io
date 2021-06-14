@@ -22,7 +22,9 @@ const state = {
         postData: [
             {id: 1, message: "Hi, how are you", likes: 43},
             {id: 2, message: "I am fine, thank you", likes: 4},
-        ]
+        ],
+        message: '435'
+
     },
     NavBarPage: {
         NavBarItems: [
@@ -62,6 +64,12 @@ export let addPost = (sendMessage) => {
         likes: 0
     };
     state.profilePage.postData.push(newPost);
+
+    reRender();
+}
+
+export let updateMessage = (messageNow) => {
+    state.profilePage.message = messageNow;
 
     reRender();
 }
