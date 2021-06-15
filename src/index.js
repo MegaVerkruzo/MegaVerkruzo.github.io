@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './redux/state';
-import {addPost} from "./redux/state";
-import {reRender} from "./render";
+import {addPost, subscriber, updateMessage, addMessageDialog, updateMessageDialog} from "./redux/state";
 
-reRender();
+export let reRender = (state) => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App state={state} addPost={addPost} updateMessage={updateMessage} addMessageDialog={addMessageDialog} updateMessageDialog={updateMessageDialog}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+subscriber(reRender);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

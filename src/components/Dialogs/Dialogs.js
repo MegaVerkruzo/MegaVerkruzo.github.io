@@ -6,16 +6,18 @@ import React from 'react';
 
 const Dialogs = (props) => {
 
-    debugger;
-
     const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
     const messageElements = props.state.messageData.map(el => <Message message={el.message} AmI={el.AmI}/>);
 
     let newMessageText = React.createRef();
 
     let addMessage = () => {
+        props.addMessageDialog();
+    }
+
+    let updateText = () => {
         let text = newMessageText.current.value;
-        alert(text);
+        props.updateMessageDialog(text);
     }
 
     return (
@@ -31,7 +33,7 @@ const Dialogs = (props) => {
                     CHAT :
                 </div>
                 { messageElements }
-                <textarea className={s.input} placeholder="Write message>:3" ref={ newMessageText }>Something</textarea>
+                <textarea onChange={ updateText } className={s.input} placeholder="Write message>:3" ref={ newMessageText } value={props.state.newMessage}>Something</textarea>
                 <div className={`button ${s.button}`} onClick={ addMessage }>Send</div>
             </div>
 

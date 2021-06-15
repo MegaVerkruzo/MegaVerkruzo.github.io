@@ -1,4 +1,6 @@
-import {reRender} from "../render";
+let reRender = () => {
+    console.log('Some changed');
+}
 
 const state = {
     dialogPage: {
@@ -16,7 +18,8 @@ const state = {
             {id: 3, message:"Wow, this is cool", AmI: false},
             {id: 4, message:"3", AmI: true},
             {id: 5, message:"76", AmI: true}
-        ]
+        ],
+        newMessage: ''
     },
     profilePage: {
         postData: [
@@ -59,18 +62,40 @@ const state = {
 
 export let addPost = () => {
     let newPost = {
-        id: 3,
+        id: state.profilePage.postData.length + 1,
         message: state.profilePage.message,
         likes: 0
     };
     state.profilePage.postData.push(newPost);
     state.profilePage.message = '';
-    reRender();
+    reRender(state);
 }
 
 export let updateMessage = (messageNow) => {
     state.profilePage.message = messageNow;
-    reRender();
+    reRender(state);
 }
+
+export let addMessageDialog = () => {
+    let newMessage = {
+        id: state.dialogPage.messageData.length + 1,
+        message: state.dialogPage.newMessage,
+        AmI: true
+    };
+    state.dialogPage.messageData.push(newMessage);
+    state.dialogPage.newMessage = '';
+    reRender(state);
+}
+
+export let updateMessageDialog = messageNow => {
+    state.dialogPage.newMessage = messageNow;
+    reRender(state);
+}
+
+export let subscriber = observer => {
+    reRender = observer;
+    reRender(state);
+}
+
 
 export default state;
