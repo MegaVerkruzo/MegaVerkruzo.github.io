@@ -3,6 +3,9 @@ import './OnePost/OnePost';
 import OnePost from "./OnePost/OnePost";
 import React from 'react';
 import './../../App.css';
+import {AddPostCreateAction, UpdateMessageCreateAction} from "../../../redux/state";
+
+
 
 const Posts = (props) => {
 
@@ -11,12 +14,13 @@ const Posts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        props.addPost();
+        props.dispatch(AddPostCreateAction());
     }
 
     let updateText = () => {
         let text = newPostElement.current.value;
-        props.updateMessage(text);
+
+        props.dispatch(UpdateMessageCreateAction(text));
     }
 
     return (
@@ -26,14 +30,15 @@ const Posts = (props) => {
             </div>
             <div className={s.form}>
                 <div>
-                    <textarea onChange={ updateText } className={s.form__area} ref={newPostElement} placeholder="Write something>:3" value={props.message}></textarea>
+                    <textarea onChange={updateText} className={s.form__area} ref={newPostElement}
+                              placeholder="Write something>:3" value={props.message}></textarea>
                 </div>
                 <div className={`${s.form__button} button`} onClick={addPost}>
                     <div>Send</div>
                 </div>
             </div>
             <div class={s.posts}>
-                { postElements }
+                {postElements}
             </div>
         </div>
     );
