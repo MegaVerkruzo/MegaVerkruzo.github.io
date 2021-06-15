@@ -1,24 +1,74 @@
 .posts__items {
-    display: inline-block;
+    display: flex;
+    align-items: flex-start;
     border: 2px solid black;
     padding: 5px;
     margin: 10px;
 }
 
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px black solid;
+}
 
 .items__img{
     float: left;
 }
 
 .items__text {
+    word-wrap: break-word;
+    text-align: left;
     margin: 15px 30px 0 70px;
     padding: 5px 0 0 50px;
 }
 
 .I {
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .Someone {
-    align-self: flex-end;
+    align-self: flex-start;
+}
+
+@media (min-width: 1224px) and (max-width: 1400px) {
+    .posts__items {
+        width: 200px;
+    }
+    .avatar {
+        width: 30px;
+    }
+    .items__text {
+        width: 70%;
+        margin: 0;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .posts__items {
+        width: 250px;
+    }
+    .avatar {
+        width: 40px;
+    }
+    .items__text {
+        width: 190px;
+        margin: 0;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .posts__items {
+        width: 300px;
+    }
+    .avatar {
+        width: 50px;
+    }
+    .items__text {
+        width: 240px;
+        margin: 0;
+        padding: 0 10px;
+    }
 }

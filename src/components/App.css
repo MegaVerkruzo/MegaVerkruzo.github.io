@@ -63,7 +63,23 @@ textarea {
   grid-area: c;
 }
 
+/*@media (max-width : 1000px) {*/
+/*  .app-wrapper {*/
+/*    display: grid;*/
+/*    margin: 0 auto;*/
+/*    max-width: 20%;*/
 
+/*    grid-template-areas:*/
+/*    "h"*/
+/*    "c"*/
+/*    "n";*/
 
+/*    grid-template-rows: 3fr 3fr 3fr;*/
+/*  }*/
+/*}*/
 
-
+@media (min-width: 1224px) and (max-width: 1824px) {
+  textarea {
+    background: red;
+  }
+}
