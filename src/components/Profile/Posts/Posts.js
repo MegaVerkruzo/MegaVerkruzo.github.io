@@ -11,13 +11,11 @@ const Posts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
+        props.addPost();
     }
 
     let updateText = () => {
         let text = newPostElement.current.value;
-
         props.updateMessage(text);
     }
 
@@ -28,9 +26,8 @@ const Posts = (props) => {
             </div>
             <div className={s.form}>
                 <div>
-                    <textarea onKeyUp={ updateText } className={s.form__area} ref={newPostElement} placeholder="Write something>:3"></textarea>
+                    <textarea onChange={ updateText } className={s.form__area} ref={newPostElement} placeholder="Write something>:3" value={props.message}></textarea>
                 </div>
-                {`${props.message}`}
                 <div className={`${s.form__button} button`} onClick={addPost}>
                     <div>Send</div>
                 </div>
