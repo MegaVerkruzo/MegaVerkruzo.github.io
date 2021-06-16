@@ -3,7 +3,7 @@ import './OnePost/OnePost';
 import OnePost from "./OnePost/OnePost";
 import React from 'react';
 import './../../App.css';
-import {AddPostCreateAction, UpdateMessageCreateAction} from "../../../redux/state";
+import {AddPostCreateAction, UpdateMessageCreateAction} from "../../../redux/profileReducer";
 
 
 
