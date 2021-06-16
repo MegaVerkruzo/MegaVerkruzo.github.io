@@ -7,6 +7,8 @@ import './../../App.css';
 
 const Posts = (props) => {
 
+    debugger;
+
     const postElements = props.state.postData.map(el => <OnePost id={el.id} message={el.message} likes={el.likes}/>);
 
     let newPostElement = React.createRef();

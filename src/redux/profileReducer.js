@@ -15,13 +15,14 @@ export const UpdateMessageCreateAction = text => {
 
 let initialState = {
     postData: [
-        {id: 1, message: "Hi, how are you", likes: 43},
+        {id: 1, message: "Hah, how are you", likes: 43},
         {id: 2, message: "I am fine, thank you", likes: 4},
     ],
     message: ''
 }
 
 const profileReducer = (state = initialState, action) => {
+    let resultState = {...state};
     switch (action.type) {
         case AddPostType:
             let newPost = {
@@ -29,14 +30,15 @@ const profileReducer = (state = initialState, action) => {
                 message: state.message,
                 likes: 0
             };
-            state.postData.push(newPost);
-            state.message = '';
-            return state;
+            resultState.postData = [...state.postData];
+            resultState.postData.push(newPost);
+            resultState.message = '';
+            return resultState;
         case UpdateMessageType:
-            state.message = action.message;
-            return state;
+            resultState.message = action.message;
+            return resultState;
         default:
-            return state;
+            return resultState;
     }
 }
 

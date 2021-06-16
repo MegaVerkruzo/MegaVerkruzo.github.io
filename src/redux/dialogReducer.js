@@ -30,6 +30,7 @@ let initialState = {
 }
 
 const dialogReducer = (state = initialState, action) => {
+    let resultState = {...state};
     switch (action.type) {
         case AddMessageDialogType:
             let newMessage = {
@@ -37,14 +38,15 @@ const dialogReducer = (state = initialState, action) => {
                 message: state.newMessage,
                 AmI: true
             };
-            state.messageData.push(newMessage);
-            state.newMessage = '';
-            return state;
+            resultState.messageData = [...state.messageData];
+            resultState.messageData.push(newMessage);
+            resultState.newMessage = '';
+            return resultState;
         case UpdateMessageDialogType:
-            state.newMessage = action.message;
-            return state;
+            resultState.newMessage = action.message;
+            return resultState;
         default:
-            return state;
+            return resultState;
     }
 }
 

@@ -20,6 +20,10 @@ let initialState = {
             to: '/settings',
             text: 'Settings'
         },
+        {
+            to: '/findfriends',
+            text: 'Find Friends'
+        }
     ],
     bestFriends: [
         {id: 3, name: "Lena", sex: "Female"},

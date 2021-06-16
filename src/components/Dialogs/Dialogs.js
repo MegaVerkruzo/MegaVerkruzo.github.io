@@ -7,8 +7,6 @@ import React from 'react';
 
 const Dialogs = (props) => {
 
-    debugger;
-
     const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
     const messageElements = props.state.messageData.map(el => <Message message={el.message} AmI={el.AmI}/>);
 
