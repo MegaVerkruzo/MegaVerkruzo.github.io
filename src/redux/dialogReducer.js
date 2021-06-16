@@ -10,19 +10,40 @@ export const UpdateMessageDialogCreateAction = text => {
     }
 }
 
-const dialogReducer = (state, action) => {
+let initialState = {
+    contactData: [
+        {id: 1, name: "Andrey", sex: "Male"},
+        {id: 2, name: "Alexey", sex: "Male"},
+        {id: 3, name: "Lena", sex: "Female"},
+        {id: 4, name: "Darya", sex: "Female"},
+        {id: 5, name: "Sergey", sex: "Male"},
+        {id: 6, name: "Airat", sex: "Male"}
+    ],
+    messageData: [
+        {id: 1, message:"Hi, i waant learn ReactJS", AmI: true},
+        {id: 2, message:"Like", AmI: false},
+        {id: 3, message:"Wow, this is cool", AmI: false},
+        {id: 4, message:"3", AmI: true},
+        {id: 5, message:"76", AmI: true}
+    ],
+    newMessage: ''
+}
+
+const dialogReducer = (state = initialState, action) => {
+    debugger;
     switch (action.type) {
         case AddMessageDialogType:
             let newMessage = {
-                id: state.dialogPage.messageData.length + 1,
-                message: state.dialogPage.newMessage,
+                id: state.messageData.length + 1,
+                message: state.newMessage,
                 AmI: true
             };
-            state.dialogPage.messageData.push(newMessage);
-            state.dialogPage.newMessage = '';
+            state.messageData.push(newMessage);
+            state.newMessage = '';
             return state;
         case UpdateMessageDialogType:
-            state.dialogPage.newMessage = action.message;
+            state.newMessage = action.message;
+            return state;
         default:
             return state;
     }
