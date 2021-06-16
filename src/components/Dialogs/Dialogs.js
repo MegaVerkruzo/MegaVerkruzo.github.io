@@ -3,11 +3,11 @@ import Dialog from "./Dialog/Dialog.js";
 import './../App.css';
 import Message from "./Message/Message";
 import React from 'react';
-import {AddMessageDialogCreateAction, UpdateMessageDialogCreateAction} from "../../redux/dialogReducer";
-
 
 
 const Dialogs = (props) => {
+
+    debugger;
 
     const contactElements = props.state.contactData.map(el => <Dialog name={el.name} id={el.id} sex={el.sex}/>);
     const messageElements = props.state.messageData.map(el => <Message message={el.message} AmI={el.AmI}/>);
@@ -15,13 +15,13 @@ const Dialogs = (props) => {
     let newMessageText = React.createRef();
 
     let addMessage = () => {
-        props.dispatch(AddMessageDialogCreateAction());
+        props.addMessage();
     }
 
     let updateText = () => {
         let text = newMessageText.current.value;
 
-        props.dispatch(UpdateMessageDialogCreateAction(text));
+        props.updateText(text);
     }
 
     return (

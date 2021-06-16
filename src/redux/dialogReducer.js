@@ -30,7 +30,6 @@ let initialState = {
 }
 
 const dialogReducer = (state = initialState, action) => {
-    debugger;
     switch (action.type) {
         case AddMessageDialogType:
             let newMessage = {
