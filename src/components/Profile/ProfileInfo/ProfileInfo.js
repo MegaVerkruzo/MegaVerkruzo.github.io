@@ -1,15 +1,15 @@
 import React from "react";
 import s from "./ProfileInfo.module.css";
-
-
+import Wall_Space from './../../../assets/image/Wall_space.jpg';
+import MyAvatar from './../../../assets/image/MyAvatar.png'
 const ProfileInfo = () => {
     return (
         <div className={s.content}>
             <div>
-                <img className={s.wall} src="http://elitefon.ru/pic/201302/1920x1080/elitefon.ru-32867.jpg"></img>
+                <img className={s.wall} src={Wall_Space}></img>
             </div>
             <div>
-                <img className={s.icon} src="https://image.flaticon.com/icons/png/512/4481/4481101.png"></img>
+                <img className={s.icon} src={MyAvatar}></img>
             </div>
 
             <div className={s.block_text}>

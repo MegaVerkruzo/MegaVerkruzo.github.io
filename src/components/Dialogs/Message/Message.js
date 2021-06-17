@@ -1,17 +1,16 @@
 import classes from './Message.module.css';
+import {I_Or_Another} from "../../some_functions";
 
 const Message = (props) => {
 
     let who;
 
-    let path;
+    let path = I_Or_Another(props.AmI);
 
     if (props.AmI) {
         who = classes.I;
-        path = "https://image.flaticon.com/icons/png/512/4481/4481101.png";
     } else {
         who = classes.Someone;
-        path = "https://image.flaticon.com/icons/png/512/4849/4849759.png"
     }
 
     return (

@@ -1,14 +1,10 @@
 import React from 'react';
 import './../../App.css';
 import s from './BestFriend.module.css';
+import {Girl_Or_Man} from "../../some_functions";
 
 const BestFriend = (props) => {
-    let path;
-    if (props.sex === "Male") {
-        path = "https://image.flaticon.com/icons/png/512/4849/4849759.png";
-    } else {
-        path = "https://image.flaticon.com/icons/png/512/82/82459.png";
-    }
+    let path = Girl_Or_Man(props.sex);
 
     return (
         <div className={s.block}>

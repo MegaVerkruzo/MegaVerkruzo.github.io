@@ -28,15 +28,16 @@ const Dialogs = (props) => {
                 <div className={`title ${s.title__mar}`}>
                     DIALOGS:
                 </div>
-                { contactElements }
+                {contactElements}
             </div>
             <div className={s.messages}>
                 <div className={`title ${s.title__mar}`}>
                     CHAT:
                 </div>
-                { messageElements }
-                <textarea onChange={ updateText } className={s.input} placeholder="Write message>:3" ref={ newMessageText } value={props.state.newMessage}>Something</textarea>
-                <div className={`button ${s.button}`} onClick={ addMessage }>Send</div>
+                {messageElements}
+                <textarea onChange={updateText} className={s.input} placeholder="Write message>:3" ref={newMessageText}
+                          value={props.state.newMessage}>Something</textarea>
+                <div className={`button ${s.button}`} onClick={addMessage}>Send</div>
             </div>
 
         </div>
