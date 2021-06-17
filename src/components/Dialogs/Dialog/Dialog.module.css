@@ -1,5 +1,6 @@
 .dialog {
     display: flex;
+    align-items: center;
     border: 2px black solid;
     margin: 10px;
     padding: 5px;
@@ -14,4 +15,34 @@
 .dialog__img {
     width: 70px;
     height: 70px;
+}
+
+@media (min-width: 1224px) and (max-width: 1400px) {
+    .dialog {
+        height: 40px;
+    }
+    .dialog__img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .dialog {
+        height: 50px;
+    }
+    .dialog__img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1824px) {
+    .dialog {
+        height: 70px;
+    }
+    .dialog__img {
+        height: 60px;
+        width: 60px;
+    }
 }
