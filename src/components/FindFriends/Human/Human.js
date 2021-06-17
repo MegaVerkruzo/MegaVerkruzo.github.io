@@ -19,19 +19,19 @@ const Human = (props) => {
         <div className={classes.block}>
             <div className={classes.block__summary}>
                 <img src={path} className={`avatar`}></img>
-                <div onClick={Change_Flat} className={`button`}>{`${f_or_e}`}</div>
+                <div onClick={Change_Flat} className={`button ${classes.block__summary_button}`}>{`${f_or_e}`}</div>
             </div>
             <div className={classes.block__description}>
-                <div className={classes.block__description_name}>
+                <div className={`${classes.block__description_name} ${classes.block__description_text}`}>
                     {`${props.name} ${sh_surname}`}
                 </div>
-                <div className={classes.block__description_description}>
+                <div className={`${classes.block__description_description} ${classes.block__description_text}`}>
                     {`${props.description}`}
                 </div>
-                <div className={classes.block__description_city}>
+                <div className={`${classes.block__description_city} ${classes.block__description_text}`}>
                     {`${props.city}`}
                 </div>
-                <div className={classes.block__description_country}>
+                <div className={`${classes.block__description_country} ${classes.block__description_text}`}>
                     {`${props.country}`},
                 </div>
             </div>
