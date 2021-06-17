@@ -13,7 +13,7 @@ const HIDE_PEOPLE = 'HIDE-PEOPLE';
 export const ChangeRelationShipCreateAction = id => {
     return {
         'type' : CHANGE_RELATIONSHIP,
-        'id' : id - 1
+        'id' : id
     //    Передаем id - 1, т.к. нужно просматривать в массиве элементы. Они начинаются с нуля
     }
 }
@@ -34,23 +34,22 @@ let initialState = {
 }
 
 const findFriendsReducer = (state = initialState, action) => {
-    let resultState = {...state}
+    let resultState = {...state};
     switch (action.type) {
         case SHOW_PEOPLE:
-            resultState.showPeople = [...action.array];
+            debugger;
+            resultState.showPeople = [...state.showPeople, ...action.array];
             return resultState;
         case HIDE_PEOPLE:
-            resultState.showPeople = [...state.showPeople];
-            let cnt = resultState.showPeople.length;
-            cnt = min(cnt, 4);
-            for (let i = 0; i < cnt; ++i) {
-                resultState.showPeople.pop();
-            }
+            resultState.showPeople = [];
             return resultState;
         case CHANGE_RELATIONSHIP:
-            resultState.showPeople = [...state.showPeople];
-            resultState.showPeople[action.id] = {...state.showPeople[action.id]};
-            resultState.showPeople[action.id].followed = !resultState.showPeople[action.id].followed;
+            resultState.showPeople = state.showPeople.map( el => {
+                if (el.id === action.id) {
+                    return {...el, followed: !el.followed};
+                }
+                return el;
+            });
             return resultState;
         default:
             return resultState;

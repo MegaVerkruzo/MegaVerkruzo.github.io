@@ -6,19 +6,19 @@ import classes from './Human.module.css';
 
 const Human = (props) => {
 
-    let path = Girl_Or_Man(props.follow ? "Male" : "Female");
-    let f_or_e = props.follow ? 'Follow' : 'Unfollow';//friend or enemy
+    let path = Girl_Or_Man(props.followed ? "Male" : "Female");
+    let f_or_e = props.followed ? 'Follow' : 'Unfollow';//friend or enemy
 
 
-    let Change_Flat = () => {
-        props.Change_Flag(17739 - props.id);
+    let Change_Flag = () => {
+        props.Change_Flag(props.id);
     }
 
     return (
         <div className={classes.block}>
             <div className={classes.block__summary}>
                 <img src={path} className={`avatar`}></img>
-                <div onClick={Change_Flat} className={`button ${classes.block__summary_button}`}>{`${f_or_e}`}</div>
+                <div onClick={Change_Flag} className={`button ${classes.block__summary_button}`}>{`${f_or_e}`}</div>
             </div>
             <div className={classes.block__description}>
                 <div className={`${classes.block__description_name} ${classes.block__description_text}`}>

@@ -2,39 +2,37 @@ import React from 'react';
 import classes from './FindFriends.module.css';
 import './../App.css';
 import Human from "./Human/Human";
-import axios from "axios";
+import * as axios from "axios";
 
 const FindFriends = (props) => {
 
-    let Show_More = array => {
-        props.Show_More(array);
+    let axios = require('axios');
+
+    let Show_More = () => {
+        axios
+            .get("https://social-network.samuraijs.com/api/1.0/users")
+            .then(response => {
+                props.Show_More(response.data.items);
+            });
     };
 
     let Hide_Users = () => {
         props.Hide_Users();
     }
 
-    if (props.findFriendsPage.showPeople.length == 0) {
-        axios
-            .get("https://social-network.samuraijs.com/api/1.0/users")
-            .then(response => Show_More(response.data.items));
+    debugger;
 
-    }
-
-    let People = props.findFriendsPage.showPeople.map(el => <Human Change_Flag={props.Change_Flag}
+    let people = props.findFriendsPage.showPeople.map(el => <Human Change_Flag={props.Change_Flag}
                                                                    id={el.id} name={el.name}
-                                                                   followed={el.followed}/>)
-
-
+                                                                   followed={el.followed}/>);
 
     return (
         <div className={classes.block}>
-
             <div className={`${classes.block__title} title`}>
                 Users:
             </div>
             <div className={classes.block__list}>
-                {People}
+                { people }
             </div>
             <div className={classes.block__lowerPage}>
                 <div className={classes.block__buttonPage}>

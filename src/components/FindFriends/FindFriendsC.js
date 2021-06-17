@@ -9,8 +9,8 @@ class FindFriendsC extends React.Component {
 
 
 
-    Show_More = () => {
-        this.props.Show_More();
+    Show_More = array => {
+        this.props.Show_More(array);
     }
 
     Hide_Users = () => {
