@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import FindFriends from "./FindFriends";
-import {ChangeRelationShipCreateAction, ShowPeopleCreateAction} from "../../redux/findFriendsReducer";
+import {ChangeRelationShipCreateAction, HidePeopleAC, ShowPeopleCreateAction} from "../../redux/findFriendsReducer";
 
 let mapStateToProps = state => {
     return {
@@ -16,6 +16,9 @@ let mapDispatchToProps = dispatch => {
         },
         Change_Flag: id => {
             dispatch(ChangeRelationShipCreateAction(id));
+        },
+        Hide_Users: () => {
+            dispatch(HidePeopleAC());
         }
     }
 }

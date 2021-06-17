@@ -8,6 +8,7 @@ let min = (a, b) => {
 
 const CHANGE_RELATIONSHIP = 'CHANGE_RELATIONSHIP';
 const SHOW_PEOPLE = 'SHOW-PEOPLE';
+const HIDE_PEOPLE = 'HIDE-PEOPLE';
 
 export const ChangeRelationShipCreateAction = id => {
     return {
@@ -19,6 +20,11 @@ export const ChangeRelationShipCreateAction = id => {
 export const ShowPeopleCreateAction = () => {
     return {
         type: SHOW_PEOPLE
+    }
+}
+export const HidePeopleAC = () => {
+    return {
+        type: HIDE_PEOPLE
     }
 }
 
@@ -179,10 +185,21 @@ const findFriendsReducer = (state = initialState, action) => {
                 resultState.showPeople.push({...resultState.allPeople[i]});
             }
             return resultState;
+        case HIDE_PEOPLE:
+            resultState.showPeople = [...state.showPeople];
+            let cnt = resultState.showPeople.length;
+            cnt = min(cnt, 4);
+            for (let i = 0; i < cnt; ++i) {
+                resultState.showPeople.pop();
+            }
+            return resultState;
         case CHANGE_RELATIONSHIP:
             resultState.showPeople = [...state.showPeople];
             resultState.showPeople[action.id] = {...state.showPeople[action.id]};
             resultState.showPeople[action.id].friend = !resultState.showPeople[action.id].friend;
+            resultState.allPeople = [...state.allPeople];
+            resultState.allPeople[action.id] = {...state.allPeople[action.id]};
+            resultState.allPeople[action.id].friend = !resultState.allPeople[action.id].friend;
             return resultState;
         default:
             return resultState;

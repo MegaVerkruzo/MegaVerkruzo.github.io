@@ -1,4 +1,5 @@
 .block {
+    margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,6 +15,14 @@
     align-items: flex-start;
 }
 
-.block__button {
+.block__lowerPage {
     align-self: center;
+}
+
+.block__buttonPage {
+    display: flex;
+}
+
+.block__page_button {
+    margin: 0 5px;
 }
