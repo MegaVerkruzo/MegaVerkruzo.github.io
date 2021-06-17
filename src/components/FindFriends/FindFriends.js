@@ -6,24 +6,30 @@ import axios from "axios";
 
 const FindFriends = (props) => {
 
-
-    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => console.log(response));
-
-    let People = props.findFriendsPage.showPeople.map(el => <Human Change_Flag={props.Change_Flag} sex={el.sex}
-                                                                   id={el.id} name={el.name} surname={el.surname}
-                                                                   city={el.city} country={el.country}
-                                                                   friend={el.friend} description={el.description}/>)
-
-    let Show_More = () => {
-        props.Show_More();
+    let Show_More = array => {
+        props.Show_More(array);
     };
 
     let Hide_Users = () => {
         props.Hide_Users();
     }
 
+    if (props.findFriendsPage.showPeople.length == 0) {
+        axios
+            .get("https://social-network.samuraijs.com/api/1.0/users")
+            .then(response => Show_More(response.data.items));
+
+    }
+
+    let People = props.findFriendsPage.showPeople.map(el => <Human Change_Flag={props.Change_Flag}
+                                                                   id={el.id} name={el.name}
+                                                                   followed={el.followed}/>)
+
+
+
     return (
         <div className={classes.block}>
+
             <div className={`${classes.block__title} title`}>
                 Users:
             </div>

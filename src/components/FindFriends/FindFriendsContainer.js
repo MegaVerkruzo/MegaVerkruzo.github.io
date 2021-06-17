@@ -11,8 +11,8 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = dispatch => {
     return {
-        Show_More: () => {
-            dispatch(ShowPeopleCreateAction());
+        Show_More: array => {
+            dispatch(ShowPeopleCreateAction(array));
         },
         Change_Flag: id => {
             dispatch(ChangeRelationShipCreateAction(id));
