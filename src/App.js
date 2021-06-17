@@ -8,7 +8,7 @@ import News from './components/News/News';
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import FindFriends from "./components/FindFriends/FindFriends";
+import FindFriendsContainer from "./components/FindFriends/FindFriendsContainer";
 
 
 const App = (props) => {
@@ -17,7 +17,7 @@ const App = (props) => {
             <Header/>
             <Navbar state={props.state.NavBarPage}/>
             <div className="app-wrapper-content block">
-                <Route path="/findFriends" render={<FindFriends/>} />
+                <Route path="/findFriends" render={() => <FindFriendsContainer/>} />
                 <Route path="/dialogs" render={() => <DialogsContainer/>}/>
                 <Route path="/profile" render={() => <Profile/>}/>
                 <Route path="/news" component={News}/>

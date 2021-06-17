@@ -1,0 +1,42 @@
+.block {
+    display: flex;
+    align-items: center;
+}
+
+.block__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block__description {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 5fr 5fr 2fr;
+
+    grid-template-areas:
+    "n n co"
+    "d d ci";
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.block__description_name {
+    grid-area: n;
+}
+
+.block__description_description {
+    grid-area: d;
+}
+
+.block__description_city {
+    text-align: right;
+    grid-area: ci;
+}
+
+.block__description_country {
+    text-align: right;
+    grid-area: co;
+}

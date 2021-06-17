@@ -1,9 +1,10 @@
 import s from './Dialog.module.css';
 import {NavLink} from "react-router-dom";
+import {Girl_Or_Man} from "../../some_functions";
 
 const Dialog = (props) => {
 
-    const path = props.sex === "Male" ? "https://image.flaticon.com/icons/png/512/4849/4849759.png" : "https://image.flaticon.com/icons/png/512/82/82459.png";
+    const path = Girl_Or_Man(props.sex);
 
     return (
         <div className={s.dialog}>

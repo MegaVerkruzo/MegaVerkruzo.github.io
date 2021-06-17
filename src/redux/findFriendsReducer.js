@@ -9,6 +9,19 @@ let min = (a, b) => {
 const CHANGE_RELATIONSHIP = 'CHANGE_RELATIONSHIP';
 const SHOW_PEOPLE = 'SHOW-PEOPLE';
 
+export const ChangeRelationShipCreateAction = id => {
+    return {
+        'type' : CHANGE_RELATIONSHIP,
+        'id' : id - 1
+    //    Передаем id - 1, т.к. нужно просматривать в массиве элементы. Они начинаются с нуля
+    }
+}
+export const ShowPeopleCreateAction = () => {
+    return {
+        type: SHOW_PEOPLE
+    }
+}
+
 let initialState = {
     allPeople: [
         {
@@ -18,7 +31,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am looking for a Job right now..'
+            description: 'I am looking for a Job right now..',
+            sex: 'Male'
         },
         {
             id: 2,
@@ -27,7 +41,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am so pretty.'
+            description: 'I am so pretty.',
+            sex: 'Female'
         },
         {
             id: 3,
@@ -36,7 +51,8 @@ let initialState = {
             city: 'Kiev',
             country: 'Ukraine',
             friend: true,
-            description: 'I like football!!!'
+            description: 'I like football!!!',
+            sex: 'Male'
         },
         {
             id: 4,
@@ -45,7 +61,8 @@ let initialState = {
             city: 'Philadelphia',
             country: 'United States',
             friend: true,
-            description: 'I am free to help you to create good Video Production'
+            description: 'I am free to help you to create good Video Production',
+            sex: 'Male'
         },
         {
             id: 5,
@@ -54,7 +71,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am looking for a Job right now..'
+            description: 'I am looking for a Job right now..',
+            sex: 'Male'
         },
         {
             id: 6,
@@ -63,7 +81,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am looking for a Job right now..'
+            description: 'I am looking for a Job right now..',
+            sex: 'Male'
         },
         {
             id: 7,
@@ -72,7 +91,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am so pretty.'
+            description: 'I am so pretty.',
+            sex: 'Female'
         },
         {
             id: 8,
@@ -81,7 +101,8 @@ let initialState = {
             city: 'Kiev',
             country: 'Ukraine',
             friend: true,
-            description: 'I like football!!!'
+            description: 'I like football!!!',
+            sex: 'Male'
         },
         {
             id: 9,
@@ -90,7 +111,8 @@ let initialState = {
             city: 'Philadelphia',
             country: 'United States',
             friend: true,
-            description: 'I am free to help you to create good Video Production'
+            description: 'I am free to help you to create good Video Production',
+            sex: 'Male'
         },
         {
             id: 10,
@@ -99,7 +121,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am looking for a Job right now..'
+            description: 'I am looking for a Job right now..',
+            sex: 'Male'
         },
     ],
     showPeople: [
@@ -110,7 +133,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am looking for a Job right now..'
+            description: 'I am looking for a Job right now..',
+            sex: 'Male'
         },
         {
             id: 2,
@@ -119,7 +143,8 @@ let initialState = {
             city: 'Minsk',
             country: 'Belarus',
             friend: false,
-            description: 'I am so pretty.'
+            description: 'I am so pretty.',
+            sex: 'Female'
         },
         {
             id: 3,
@@ -128,7 +153,8 @@ let initialState = {
             city: 'Kiev',
             country: 'Ukraine',
             friend: true,
-            description: 'I like football!!!'
+            description: 'I like football!!!',
+            sex: 'Male'
         },
         {
             id: 4,
@@ -137,7 +163,8 @@ let initialState = {
             city: 'Philadelphia',
             country: 'United States',
             friend: true,
-            description: 'I am free to help you to create good Video Production'
+            description: 'I am free to help you to create good Video Production',
+            sex: 'Male'
         }
     ]
 }
@@ -149,13 +176,13 @@ const findFriendsReducer = (state = initialState, action) => {
             resultState.showPeople = [...state.showPeople];
             let len = resultState.showPeople.length;
             for (let i = len; i < min(resultState.allPeople.length, len + 4); i++) {
-                resultState.showPeople.push(resultState.allPeople[i]);
+                resultState.showPeople.push({...resultState.allPeople[i]});
             }
             return resultState;
         case CHANGE_RELATIONSHIP:
             resultState.showPeople = [...state.showPeople];
-            resultState.showPeople[action.id - 1] = {...state.showPeople[action.id - 1]};
-            resultState.showPeople[action.id - 1].friend = !resultState.showPeople[action.id - 1].friend;
+            resultState.showPeople[action.id] = {...state.showPeople[action.id]};
+            resultState.showPeople[action.id].friend = !resultState.showPeople[action.id].friend;
             return resultState;
         default:
             return resultState;

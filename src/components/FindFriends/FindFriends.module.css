@@ -1,0 +1,19 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.block__title {
+    margin: 10px;
+}
+
+.block__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.block__button {
+    align-self: center;
+}
