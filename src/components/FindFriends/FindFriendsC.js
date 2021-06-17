@@ -1,21 +1,24 @@
 import React from 'react';
-import axios from 'axios';
-import classes from "./FindFriends.module.css";
+import classes from './FindFriends.module.css';
+import './../App.css';
+import Human from "./Human/Human";
+import axios from "axios";
 
-class FindFriendsC extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class FindFriends extends React.Component {
 
-
-
-    Show_More = array => {
-        this.props.Show_More(array);
-    }
+    Show_More = () => {
+        axios
+            .get("https://social-network.samuraijs.com/api/1.0/users")
+            .then(response => {
+                this.props.Show_More(response.data.items);
+            });
+    };
 
     Hide_Users = () => {
         this.props.Hide_Users();
-    }
+    };
+
+
 
     render() {
         return (
@@ -24,14 +27,16 @@ class FindFriendsC extends React.Component {
                     Users:
                 </div>
                 <div className={classes.block__list}>
-                    {People}
+                    { this.props.findFriendsPage.showPeople.map(el => <Human Change_Flag={this.props.Change_Flag}
+                                                                        id={el.id} name={el.name}
+                                                                        followed={el.followed}/>) }
                 </div>
                 <div className={classes.block__lowerPage}>
                     <div className={classes.block__buttonPage}>
-                        <div onClick={Show_More} className={`${classes.block__page_button} button`}>
+                        <div onClick={this.Show_More} className={`${classes.block__page_button} button`}>
                             Show more
                         </div>
-                        <div onClick={Hide_Users} className={`${classes.block__page_button} button`}>
+                        <div onClick={this.Hide_Users} className={`${classes.block__page_button} button`}>
                             Hide users
                         </div>
                     </div>
@@ -41,4 +46,4 @@ class FindFriendsC extends React.Component {
     };
 }
 
-export default FindFriendsC;
+export default FindFriends;

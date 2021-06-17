@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import FindFriends from "./FindFriends";
+import FindFriends from "./FindFriendsC";
 import {ChangeRelationShipCreateAction, HidePeopleAC, ShowPeopleCreateAction} from "../../redux/findFriendsReducer";
 
 let mapStateToProps = state => {

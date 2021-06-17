@@ -2,11 +2,9 @@ import React from 'react';
 import classes from './FindFriends.module.css';
 import './../App.css';
 import Human from "./Human/Human";
-import * as axios from "axios";
+import axios from "axios";
 
 const FindFriends = (props) => {
-
-    let axios = require('axios');
 
     let Show_More = () => {
         axios
@@ -19,8 +17,6 @@ const FindFriends = (props) => {
     let Hide_Users = () => {
         props.Hide_Users();
     }
-
-    debugger;
 
     let people = props.findFriendsPage.showPeople.map(el => <Human Change_Flag={props.Change_Flag}
                                                                    id={el.id} name={el.name}
