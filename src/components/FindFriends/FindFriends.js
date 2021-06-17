@@ -24,7 +24,6 @@ const FindFriends = (props) => {
 
     return (
         <div className={classes.block}>
-
             <div className={`${classes.block__title} title`}>
                 Users:
             </div>
