@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Social_Network/static/css/main.cb6878bb.chunk.css",
-    "main.js": "/Social_Network/static/js/main.37d7ca40.chunk.js",
-    "main.js.map": "/Social_Network/static/js/main.37d7ca40.chunk.js.map",
-    "runtime-main.js": "/Social_Network/static/js/runtime-main.8f3fd9f6.js",
-    "runtime-main.js.map": "/Social_Network/static/js/runtime-main.8f3fd9f6.js.map",
-    "static/js/2.1661f60a.chunk.js": "/Social_Network/static/js/2.1661f60a.chunk.js",
-    "static/js/2.1661f60a.chunk.js.map": "/Social_Network/static/js/2.1661f60a.chunk.js.map",
-    "static/js/3.9e6aa295.chunk.js": "/Social_Network/static/js/3.9e6aa295.chunk.js",
-    "static/js/3.9e6aa295.chunk.js.map": "/Social_Network/static/js/3.9e6aa295.chunk.js.map",
+    "main.css": "/Social_Network/static/css/main.96f2d2cb.chunk.css",
+    "main.js": "/Social_Network/static/js/main.c794d702.chunk.js",
+    "main.js.map": "/Social_Network/static/js/main.c794d702.chunk.js.map",
+    "runtime-main.js": "/Social_Network/static/js/runtime-main.8097cbf0.js",
+    "runtime-main.js.map": "/Social_Network/static/js/runtime-main.8097cbf0.js.map",
+    "static/js/2.ba70f04d.chunk.js": "/Social_Network/static/js/2.ba70f04d.chunk.js",
+    "static/js/2.ba70f04d.chunk.js.map": "/Social_Network/static/js/2.ba70f04d.chunk.js.map",
+    "static/js/3.8493e5bb.chunk.js": "/Social_Network/static/js/3.8493e5bb.chunk.js",
+    "static/js/3.8493e5bb.chunk.js.map": "/Social_Network/static/js/3.8493e5bb.chunk.js.map",
     "index.html": "/Social_Network/index.html",
-    "static/css/main.cb6878bb.chunk.css.map": "/Social_Network/static/css/main.cb6878bb.chunk.css.map",
-    "static/js/2.1661f60a.chunk.js.LICENSE.txt": "/Social_Network/static/js/2.1661f60a.chunk.js.LICENSE.txt",
+    "static/css/main.96f2d2cb.chunk.css.map": "/Social_Network/static/css/main.96f2d2cb.chunk.css.map",
+    "static/js/2.ba70f04d.chunk.js.LICENSE.txt": "/Social_Network/static/js/2.ba70f04d.chunk.js.LICENSE.txt",
     "static/media/FemaleAvatar.c7d6a54a.png": "/Social_Network/static/media/FemaleAvatar.c7d6a54a.png",
     "static/media/Logotype.b09d260d.png": "/Social_Network/static/media/Logotype.b09d260d.png",
     "static/media/MaleAvatar.a7824164.png": "/Social_Network/static/media/MaleAvatar.a7824164.png",
@@ -19,9 +19,9 @@
     "static/media/Wall_space.bc2efd4d.jpg": "/Social_Network/static/media/Wall_space.bc2efd4d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8f3fd9f6.js",
-    "static/js/2.1661f60a.chunk.js",
-    "static/css/main.cb6878bb.chunk.css",
-    "static/js/main.37d7ca40.chunk.js"
+    "static/js/runtime-main.8097cbf0.js",
+    "static/js/2.ba70f04d.chunk.js",
+    "static/css/main.96f2d2cb.chunk.css",
+    "static/js/main.c794d702.chunk.js"
   ]
 }
