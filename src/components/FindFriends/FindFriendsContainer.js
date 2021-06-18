@@ -1,11 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import FindFriends from "./FindFriendsC";
-import {ChangeRelationShipCreateAction, HidePeopleAC, ShowPeopleCreateAction} from "../../redux/findFriendsReducer";
+import {
+    ChangePageAC,
+    ChangeRelationShipCreateAction,
+    CountPageAC,
+    HidePeopleAC,
+    ShowPeopleCreateAction
+} from "../../redux/findFriendsReducer";
 
 let mapStateToProps = state => {
     return {
-        findFriendsPage: state.findFriendsPage
+        showPeople: state.findFriendsPage.showPeople,
+        currentPage: state.findFriendsPage.currentPage,
+        pageCount: state.findFriendsPage.pageCount,
+        pageSize: state.findFriendsPage.pageSize
     }
 }
 
@@ -19,6 +28,12 @@ let mapDispatchToProps = dispatch => {
         },
         Hide_Users: () => {
             dispatch(HidePeopleAC());
+        },
+        Count_Page: cnt => {
+            dispatch(CountPageAC(cnt));
+        },
+        Change_Page: p => {
+            dispatch(ChangePageAC(p));
         }
     }
 }
