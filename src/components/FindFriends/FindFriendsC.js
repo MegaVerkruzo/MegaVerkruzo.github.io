@@ -42,7 +42,7 @@ class FindFriends extends React.Component {
             .get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.pageSize}&page=${this.props.currentPage}`)
             .then(response => {
                 this.props.Is_Fetching(false);
-                this.props.Show_More(response.data.items);
+                this.Show_More(response.data.items);
             });
     }
 

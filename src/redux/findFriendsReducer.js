@@ -52,8 +52,8 @@ export const Is_Fetching = isFetching => {
 let initialState = {
     showPeople: [],
     currentPage: 1,
-    pageSize: 3,
-    pageCount: 10,
+    pageSize: 5,
+    pageCount: 100,
     isFetching: false
 }
 

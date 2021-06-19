@@ -7,7 +7,12 @@ import {NavLink} from "react-router-dom";
 
 const Human = (props) => {
 
-    let path = Girl_Or_Man(props.followed ? "Male" : "Female");
+    let path;
+    if (props.image === null) {
+        path = Girl_Or_Man(props.followed ? "Male" : "Female");
+    } else {
+        path = props.image;
+    }
     let f_or_e = props.followed ? 'Follow' : 'Unfollow';//friend or enemy
 
 

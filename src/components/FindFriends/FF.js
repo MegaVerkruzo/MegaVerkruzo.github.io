@@ -29,7 +29,7 @@ const FF = (props) => {
             <div className={classes.block__list}>
                 { props.showPeople.map(el => <Human Change_Flag={props.Change_Flag}
                                                          id={el.id} name={el.name}
-                                                         followed={el.followed}/>) }
+                                                         followed={el.followed} image={el.photos.small}/>) }
             </div>
             <div className={classes.block__lowerPage}>
                 <div className={classes.block__buttonPage}>
