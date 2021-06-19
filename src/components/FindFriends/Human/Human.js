@@ -17,7 +17,7 @@ const Human = (props) => {
     return (
         <div className={classes.block}>
             <div className={classes.block__summary}>
-                <img src={path} className={`avatar`}></img>
+                <img src={path} classNagit me={`avatar`}></img>
                 <div onClick={Change_Flag} className={`button ${classes.block__summary_button}`}>{`${f_or_e}`}</div>
             </div>
             <div className={classes.block__description}>
