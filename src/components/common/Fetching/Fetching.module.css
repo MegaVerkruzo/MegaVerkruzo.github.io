@@ -1,0 +1,9 @@
+.block {
+    display: flex;
+    justify-content: center;
+    /*background: white;*/
+}
+
+.block__fetch {
+    width: 100px;
+}

@@ -2,14 +2,19 @@ import React from 'react';
 import './components/App.css';
 import Header from "./components/Header/Header.js";
 import Navbar from "./components/Navbar/Navbar.js";
-import Profile from "./components/Profile/Profile.js";
 import {BrowserRouter, Route} from "react-router-dom";
 import News from './components/News/News';
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FindFriendsContainer from "./components/FindFriends/FindFriendsContainer";
+import ProfilePresentation from "./components/Profile/ProfilePresentation";
+import ProfileContainerConnect from "./components/Profile/ProfileContainer";
 
+
+function ProfileContainer() {
+    return null;
+}
 
 const App = (props) => {
     return (
@@ -19,7 +24,7 @@ const App = (props) => {
             <div className="app-wrapper-content block">
                 <Route path="/findFriends" render={() => <FindFriendsContainer/>} />
                 <Route path="/dialogs" render={() => <DialogsContainer/>}/>
-                <Route path="/profile" render={() => <Profile/>}/>
+                <Route path="/profile" render={() => <ProfileContainerConnect />}/>
                 <Route path="/news" component={News}/>
                 <Route path="/music" component={Music}/>
                 <Route path="/settings" component={Settings}/>

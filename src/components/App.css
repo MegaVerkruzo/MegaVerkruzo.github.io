@@ -86,9 +86,3 @@ textarea {
 /*    grid-template-rows: 3fr 3fr 3fr;*/
 /*  }*/
 /*}*/
-
-@media (min-width: 1224px) and (max-width: 1824px) {
-  textarea {
-    background: red;
-  }
-}

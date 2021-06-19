@@ -26,3 +26,7 @@
 .block__page_button {
     margin: 0 5px;
 }
+
+.block__Fetching {
+    align-self: center;
+}
