@@ -11,6 +11,7 @@ const SHOW_PEOPLE = 'SHOW-PEOPLE';
 const HIDE_PEOPLE = 'HIDE-PEOPLE';
 const COUNT_PAGE = 'COUNT-PAGE';
 const CHANGE_PAGE = 'CHANGE-PAGE';
+const IS_FETCHING = 'IS-FETCHING'
 
 export const ChangeRelationShipCreateAction = id => {
     return {
@@ -41,19 +42,25 @@ export const ChangePageAC = currentPage => {
         currentPage: currentPage
     }
 }
+export const ISFETCHINGAC = isFetching => {
+    return {
+        type: IS_FETCHING,
+        isFetching: isFetching
+    }
+}
 
 let initialState = {
     showPeople: [],
     currentPage: 1,
     pageSize: 3,
-    pageCount: 10
+    pageCount: 10,
+    isFetching: false
 }
 
 const findFriendsReducer = (state = initialState, action) => {
     let resultState = {...state};
     switch (action.type) {
         case SHOW_PEOPLE:
-            debugger;
             resultState.showPeople = [...action.array];
             return resultState;
         case HIDE_PEOPLE:
@@ -72,6 +79,9 @@ const findFriendsReducer = (state = initialState, action) => {
             return resultState;
         case CHANGE_PAGE:
             resultState.currentPage = action.currentPage;
+            return resultState;
+        case IS_FETCHING:
+            resultState.isFetching = action.isFetching;
             return resultState;
         default:
             return resultState;

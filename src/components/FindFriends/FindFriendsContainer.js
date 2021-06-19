@@ -5,7 +5,7 @@ import {
     ChangePageAC,
     ChangeRelationShipCreateAction,
     CountPageAC,
-    HidePeopleAC,
+    HidePeopleAC, ISFETCHINGAC,
     ShowPeopleCreateAction
 } from "../../redux/findFriendsReducer";
 
@@ -14,7 +14,8 @@ let mapStateToProps = state => {
         showPeople: state.findFriendsPage.showPeople,
         currentPage: state.findFriendsPage.currentPage,
         pageCount: state.findFriendsPage.pageCount,
-        pageSize: state.findFriendsPage.pageSize
+        pageSize: state.findFriendsPage.pageSize,
+        isFetching: state.findFriendsPage.isFetching
     }
 }
 
@@ -34,6 +35,9 @@ let mapDispatchToProps = dispatch => {
         },
         Change_Page: p => {
             dispatch(ChangePageAC(p));
+        },
+        Is_Fetching: Loader => {
+            dispatch(ISFETCHINGAC(Loader));
         }
     }
 }
