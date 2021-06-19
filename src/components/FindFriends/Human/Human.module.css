@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.block__summary_img {
+    cursor: pointer;
+}
+
 .block__summary {
     display: flex;
     width: 100px;

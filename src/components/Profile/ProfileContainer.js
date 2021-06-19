@@ -1,24 +1,19 @@
 import React from 'react';
-import axios from 'axios';
+import * as axios from 'axios';
 import ProfilePresentation from "./ProfilePresentation";
-import {AddProfilePage} from "../../redux/profileReducer";
+import {AddProfilePage, Is_Fetching} from "../../redux/profileReducer";
 import {connect} from "react-redux";
 
-let mapStateToProps = state => {
-    return {
-        profile: state.profilePage.profile
-    }
-}
-
-export default connect(mapStateToProps, {AddProfilePage})(ProfileContainer);
-
-class ProfileContainer extends React {
+class ProfileContainer extends React.Component {
 
     componentDidMount() {
+        this.props.Is_Fetching(true);
         axios
             .get(`https://social-network.samuraijs.com/api/1.0/profile/2`)
             .then(response => {
-                console.log(response);
+                this.props.Is_Fetching(false);
+                this.props.AddProfilePage(response.data);
+                console.log(response.data);
             });
     }
 
@@ -28,3 +23,15 @@ class ProfileContainer extends React {
         )
     };
 }
+
+let mapStateToProps = state => {
+    return {
+        profile: state.profilePage.profile,
+        isFetching: state.profilePage.isFetching
+    }
+}
+
+const ProfileContainerConnect = connect(mapStateToProps, {AddProfilePage, Is_Fetching})(ProfileContainer)
+
+export default ProfileContainerConnect;
+

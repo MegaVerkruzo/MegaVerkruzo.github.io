@@ -8,6 +8,8 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FindFriendsContainer from "./components/FindFriends/FindFriendsContainer";
+import ProfilePresentation from "./components/Profile/ProfilePresentation";
+import ProfileContainerConnect from "./components/Profile/ProfileContainer";
 
 
 function ProfileContainer() {
@@ -22,7 +24,7 @@ const App = (props) => {
             <div className="app-wrapper-content block">
                 <Route path="/findFriends" render={() => <FindFriendsContainer/>} />
                 <Route path="/dialogs" render={() => <DialogsContainer/>}/>
-                <Route path="/profile" render={() => <ProfileContainer />}/>
+                <Route path="/profile" render={() => <ProfileContainerConnect />}/>
                 <Route path="/news" component={News}/>
                 <Route path="/music" component={Music}/>
                 <Route path="/settings" component={Settings}/>

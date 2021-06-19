@@ -11,7 +11,7 @@ const SHOW_PEOPLE = 'SHOW-PEOPLE';
 const HIDE_PEOPLE = 'HIDE-PEOPLE';
 const COUNT_PAGE = 'COUNT-PAGE';
 const CHANGE_PAGE = 'CHANGE-PAGE';
-const IS_FETCHING = 'IS-FETCHING'
+const IS_FETCHING = 'IS-FETCHING';
 
 export const Change_Flag = id => {
     return {

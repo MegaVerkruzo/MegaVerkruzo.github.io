@@ -2,6 +2,7 @@ import React from 'react';
 import {Girl_Or_Man, Short_Surname} from "../../some_functions";
 import './../../App.css'
 import classes from './Human.module.css';
+import {NavLink} from "react-router-dom";
 
 
 const Human = (props) => {
@@ -17,7 +18,9 @@ const Human = (props) => {
     return (
         <div className={classes.block}>
             <div className={classes.block__summary}>
-                <img src={path} className={`avatar`}></img>
+                <NavLink to={`/profile/${props.id}`}>
+                    <img src={path} className={`avatar ${classes.block__summary_img}`}></img>
+                </NavLink>
                 <div onClick={Change_Flag} className={`button ${classes.block__summary_button}`}>{`${f_or_e}`}</div>
             </div>
             <div className={classes.block__description}>
